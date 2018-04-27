@@ -62,6 +62,7 @@ param_grid = dict(clf__gamma=gamma_range.tolist(),
                   pca__n_components=n_components)
 
 pca = decomposition.PCA()
+
 clf = SVC(kernel='rbf', gamma=0.1)
 pipe = Pipeline(steps=[('pca', pca), ('clf', clf)])
 
